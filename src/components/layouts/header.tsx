@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { homePath } from "@/path";
+import { communityPath,discoverPath, homePath, jobsPath, learningPath } from "@/path";
 
 const Header = () => {
     const pathname = usePathname();
@@ -11,11 +11,13 @@ const Header = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const navLinks = [
-        { href: '/discover', label: 'discover' },
-        { href: '/jobs', label: 'jobs' },
-        { href: '/community', label: 'community' },
-        { href: '/learn', label: 'learn' },
+        { href: discoverPath(), label: 'discover' },
+        { href: jobsPath(), label: 'jobs' },
+        { href: communityPath(), label: 'community' },
+        { href: learningPath(), label: 'learn' },
     ];
+
+    console.log('discoverPath:', discoverPath());
 
     useEffect(() => {
         setIsLoggedIn(!!localStorage.getItem('token'));
