@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { intialDevelopers } from '@/data';
+import { developerPath } from '@/path';
+
 export default function Page() {
     return (
         <div>
@@ -9,7 +11,7 @@ export default function Page() {
                 <div key={developer.id}>
                     <h2 className='text-lg'>{developer.name}</h2>
                     <p className='text-sm'>{developer.description}</p>
-                    <Link href={`/developers/${developer.id}`}>View</Link>
+                    <Link href={developerPath(developer.id)}>View</Link>
                 </div>
             ))}
         </div>

@@ -1,10 +1,8 @@
 import { intialDevelopers } from '@/data';
 
-
 type DeveloperPageProps = {
     params: Promise<{ id: string }>;
 }
-
 
 export default async function DeveloperPage({ params }: DeveloperPageProps) {
     const { id } = await params;
