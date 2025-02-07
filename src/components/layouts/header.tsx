@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { homePath } from "@/path";
 
 const Header = () => {
@@ -16,6 +16,10 @@ const Header = () => {
         { href: '/community', label: 'community' },
         { href: '/learn', label: 'learn' },
     ];
+
+    useEffect(() => {
+        setIsLoggedIn(!!localStorage.getItem('token'));
+    }, []);
 
     return (
         <header className="border-b bg-white">
