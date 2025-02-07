@@ -53,7 +53,7 @@ const Header = () => {
                         <div className="relative w-full">
                             <input 
                                 type="text" 
-                                placeholder="Search models, creatives, agencies..." 
+                                placeholder="Search developers, creatives, projects..." 
                                 className="w-full px-4 py-2 border rounded-md bg-gray-50 
                                          focus:ring-2 focus:ring-gray-500 focus:border-transparent
                                          placeholder:text-gray-400 transition-all"
