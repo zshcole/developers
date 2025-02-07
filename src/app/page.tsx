@@ -75,14 +75,14 @@ export default function Home() {
       </div>
       {/* Developer Grid */}
       <div className='max-w-7xl mx-auto px-2 py-4 md:py-12'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-8'>
           {[1,2,3,4,5,6].map((i) => (
-            <div key={i} className='bg-gray-100 rounded-md'>
-              <div className='h-[25vh] bg-gray-200 rounded-t-md'></div>
+            <div key={i} className='bg-gray-100'>
+              <div className='h-[25vh] bg-gray-200'></div>
               <div className='p-4'>
                 <h3 className='text-sm md:text-base font-semibold'>Andrew Rivera</h3>
                 <p className='text-xs md:text-sm'>Full Stack Engineer</p>
-                <div className="flex flex-wrap gap-2 mt-2">
+                <div className="flex flex-wrap mt-2">
                   <span className='text-xs px-2 py-1 bg-gray-100'>Python</span>
                   <span className='text-xs px-2 py-1 bg-gray-100'>Django</span>
                   <span className='text-xs px-2 py-1 bg-gray-100'>AWS</span>
@@ -100,8 +100,8 @@ export default function Home() {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               {[1,2,3,4].map((i) => (
-                <div key={i} className='bg-white rounded-md'>
-                  <div className='h-[25vh] bg-gray-200 rounded-t-md'></div>
+                <div key={i} className='bg-white'>
+                  <div className='h-[25vh] bg-gray-200'></div>
                   <div className='p-4'>
                     <h3 className='text-sm md:text-base font-semibold'>Tech Trends 2025</h3>
                     <p className='text-xs md:text-sm'>The future of technology is here.</p>
