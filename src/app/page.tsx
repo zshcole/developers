@@ -1,5 +1,8 @@
 'use client';
 import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('TRENDING');
@@ -8,37 +11,39 @@ export default function Home() {
       {/* Hero Grid Section */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-1 mb-1'>
         <div className='relative h-[50vh] md:h-[70vh] bg-gray-100'>
-          <div className='absolute bottom-6 left-6 text-black'>
-            <h2 className='text-xl md:text-2xl font-semibold mb-1'>Featured Developer</h2>
-            <p className='text-base md:text-lg'>Andrew Rivera - Full Stack Engineer</p>
-          </div>
+        <Card className='relative h-[50vh] md:h-[70vh] bg-gray-100'>
+    <CardContent className='absolute bottom-6 left-6 text-black'>
+      <h2 className='text-xl md:text-2xl font-semibold mb-1'>Featured Developer</h2>
+      <p className='text-base md:text-lg'>Andrew Rivera - Full Stack Engineer</p>
+    </CardContent>
+  </Card>
         </div>
         <div className='grid grid-cols-2 gap-1'>
-          <div className='relative h-[25vh] md:h-[35vh] bg-gray-200'>
-            <div className='absolute bottom-4 left-6 text-black'>
+          <Card className='relative h-[25vh] md:h-[35vh] bg-gray-200'>
+            <CardContent className='absolute bottom-4 left-6 text-black'>
               <p className='text-sm font-medium'>Latest Projects</p>
               <p className='text-xs'>React Native Apps</p>
-            </div>
-          </div>
-          <div className='relative h-[25vh] md:h-[35vh] bg-gray-300'>
-            <div className='absolute bottom-4 left-6 text-black'>
+            </CardContent>
+          </Card>
+          <Card className='relative h-[25vh] md:h-[35vh] bg-gray-300'>
+            <CardContent className='absolute bottom-4 left-6 text-black'>
               <p className='text-sm font-medium'>Industry News</p>
               <p className='text-xs'>Tech Trends 2025</p>
-            </div>
-          </div>
-          <div className='relative h-[25vh] md:h-[35vh] bg-gray-200'>
-            <div className='absolute bottom-4 left-6 text-black'>
+            </CardContent>
+          </Card>
+          <Card className='relative h-[25vh] md:h-[35vh] bg-gray-200'>
+            <CardContent className='absolute bottom-4 left-6 text-black'>
               <p className='text-sm font-medium'>Job Opportunities</p>
               <p className='text-xs'>Senior Positions</p>
-            </div>
-          </div>
-          <div className='relative h-[25vh] md:h-[35vh] bg-gray-300'>
-            <div className='absolute bottom-4 left-6 text-black'>
+            </CardContent>
+          </Card>
+          <Card className='relative h-[25vh] md:h-[35vh] bg-gray-300'>
+            <CardContent className='absolute bottom-4 left-6 text-black'>
               <p className='text-sm font-medium'>Learning Paths</p>
               <p className='text-xs'>AI Engineering</p>
-            </div>
-          </div>
-        </div>
+            </CardContent>
+          </Card>
+      </div>
       </div>
 
       {/* Membership CTA */}
@@ -51,9 +56,9 @@ export default function Home() {
             Developers.com membership gives you the inspiration, the access, and the tools to uncover
             the many exciting opportunities the industry has to offer. Join our community today.
           </p>
-          <button className='bg-white text-black px-6 md:px-8 py-3 hover:bg-gray'>
+          <Button className='bg-white text-black px-6 md:px-8 py-3 hover:bg-gray'>
             JOIN NOW
-          </button>
+          </Button>
         </div>
       </div>
       {/* Category Navigation*/}
@@ -74,24 +79,37 @@ export default function Home() {
         </div>
       </div>
       {/* Developer Grid */}
-      <div className='max-w-7xl mx-auto px-2 py-4 md:py-12'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-8'>
-          {[1,2,3,4,5,6].map((i) => (
-            <div key={i} className='bg-gray-100'>
-              <div className='h-[25vh] bg-gray-200'></div>
-              <div className='p-4'>
-                <h3 className='text-sm md:text-base font-semibold'>Andrew Rivera</h3>
-                <p className='text-xs md:text-sm'>Full Stack Engineer</p>
-                <div className="flex flex-wrap mt-2">
-                  <span className='text-xs px-2 py-1 bg-gray-100'>Python</span>
-                  <span className='text-xs px-2 py-1 bg-gray-100'>Django</span>
-                  <span className='text-xs px-2 py-1 bg-gray-100'>AWS</span>
+      <div className="max-w-7xl mx-auto px-3 py-2 sm:px-4 md:px-4 md:py-6">
+      <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
+        {[1, 2, 3, 4, 5, 6].map((i) => (
+          <Card key={i} className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            {/* Image placeholder */}
+            <div className="h-48 bg-gradient-to-r from-gray-200 to-gray-300" />
+            
+            {/* Content container */}
+            <div className="p-3 sm:p-4">
+              <CardHeader className="p-0 space-y-1 mb-2">
+                <h3 className="text-sm md:text-base font-semibold text-gray-900">Andrew Rivera</h3>
+                <p className="text-xs md:text-sm text-gray-600">Full Stack Engineer</p>
+              </CardHeader>
+
+              <CardContent className="p-0">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
+                  {['Python', 'Django', 'AWS'].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2 py-1 text-xs md:text-sm bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors duration-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
-              </div>
+              </CardContent>
             </div>
-          ))}
-        </div>
+          </Card>
+        ))}
       </div>
+    </div>
       {/* Industry News */}
       <div className='bg-gray-50 py-12 md:py-16'>
           <div className='max-w-6xl mx-auto px-4'>
@@ -100,13 +118,13 @@ export default function Home() {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               {[1,2,3,4].map((i) => (
-                <div key={i} className='bg-white'>
+                <Card key={i} className='w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300'>
                   <div className='h-[25vh] bg-gray-200'></div>
-                  <div className='p-4'>
+                  <CardHeader className="p-4">
                     <h3 className='text-sm md:text-base font-semibold'>Tech Trends 2025</h3>
                     <p className='text-xs md:text-sm'>The future of technology is here.</p>
-                  </div>
-                </div>
+                  </CardHeader>
+                </Card>
               ))}
             </div>
           </div>
@@ -120,14 +138,14 @@ export default function Home() {
                 <p className='text-gray=600'>Sign up for our weekly tech newsletter</p>
               </div>
               <div className='flex flex-col sm:flex-row gap-4 w-full md:w-auto'>
-                <input 
+                <Input 
                   type='email' 
                   placeholder='Enter your email address' 
                   className='w-full sm:w-auto px-4 py-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-gray-500 focus:border-transparent placeholder:text-gray-400 transition-all'
                 />
-                <button className='bg-black text-white px-6 py-3 hover:bg-gray-800'>
+                <Button className='bg-black text-white px-6 py-3 hover:bg-gray-800'>
                   SUBSCRIBE
-                </button>
+                </Button>
               </div>
             </div>
         </div>
