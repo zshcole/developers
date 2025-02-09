@@ -116,10 +116,10 @@ export default function Home() {
             <h2 className='text-xl md:text-2xl font-semibold mb-4 md:mb-6'>
               Industry News
             </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8'>
               {[1,2,3,4].map((i) => (
-                <Card key={i} className='w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300'>
-                  <div className='h-[25vh] bg-gray-200'></div>
+                <Card key={i} className='space-y-3'>
+                  <div className='aspect-video bg-gray-200'></div>
                   <CardHeader className="p-4">
                     <h3 className='text-sm md:text-base font-semibold'>Tech Trends 2025</h3>
                     <p className='text-xs md:text-sm'>The future of technology is here.</p>
