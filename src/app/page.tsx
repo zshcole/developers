@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Heading from '@/components/heading';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -49,13 +50,12 @@ export default function Home() {
       {/* Membership CTA */}
       <div className='bg-black text-white py-12 md:py-16 px-4'>
         <div className='max-w-4xl mx-auto text-center'>
-          <h1 className='text-2xl md:text-4xl font-light mb-4 md:mb-6'>
-            Are you ready to take your development career to the next level?
-          </h1>
-          <p className='text-base md:text-xl mb-6 md:mb-8 font-light'>
-            Developers.com membership gives you the inspiration, the access, and the tools to uncover
-            the many exciting opportunities the industry has to offer. Join our community today.
-          </p>
+          <Heading 
+            className='text-2xl md:text-4xl font-light mb-4 md:mb-6' 
+            title="Are you ready to take your development career to the next level?"
+            description='Developers.com membership gives you the inspiration, the access, and the tools to uncover
+              the many exciting opportunities the industry has to offer. Join our community today.'
+            />
           <Button className='bg-white text-black px-6 md:px-8 py-3 hover:bg-gray'>
             JOIN NOW
           </Button>
