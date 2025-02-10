@@ -1,9 +1,11 @@
 'use client';
+import Image from 'next/image';
 import { useState } from 'react';
 import Heading from '@/components/heading';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { intialDevelopers } from '@/data';
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('TRENDING');
@@ -81,15 +83,23 @@ export default function Home() {
       {/* Developer Grid */}
       <div className="max-w-7xl mx-auto px-3 py-2 sm:px-4 md:px-4 md:py-6">
       <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-          <Card key={i} className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        {intialDevelopers.map((dev) => (
+          <Card key={dev.id} className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
             {/* Image placeholder */}
-            <div className="h-48 bg-gradient-to-r from-gray-200 to-gray-300" />
+            <div className="h-48 bg-gradient-to-r from-gray-200 to-gray-300">
+              <Image
+                src={dev.avatar}
+                alt={dev.name}
+                width={300}
+                height={200}
+                className="object-cover w-full h-full"
+              />
+            </div>
             
             {/* Content container */}
             <div className="p-3 sm:p-4">
               <CardHeader className="p-0 space-y-1 mb-2">
-                <h3 className="text-sm md:text-base font-semibold text-gray-900">Andrew Rivera</h3>
+                <h3 className="text-sm md:text-base font-semibold text-gray-900">{dev.name}</h3>
                 <p className="text-xs md:text-sm text-gray-600">Full Stack Engineer</p>
               </CardHeader>
 
