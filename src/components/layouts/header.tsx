@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { communityPath, discoverPath, homePath, jobsPath, learningPath } from "@/path";
+import { ThemeSwitcher } from "../theme/theme-switcher";
 
 const Header = () => {
     const pathname = usePathname();
@@ -89,6 +90,8 @@ const Header = () => {
                                 </Button>
                             </>
                         ) : (
+                            <>
+                            <ThemeSwitcher/>
                             <div className="flex items-center space-x-4">
                                 <Button asChild variant={"outline"}>
                                 <Link 
@@ -107,6 +110,7 @@ const Header = () => {
                                 </Link>
                                 </Button>
                             </div>
+                            </>
                         )}
                     </div>
 
