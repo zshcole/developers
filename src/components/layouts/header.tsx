@@ -21,8 +21,6 @@ const Header = () => {
         { href: learningPath(), label: 'learn' },
     ];
 
-    console.log('discoverPath:', discoverPath());
-
     useEffect(() => {
         setIsLoggedIn(!!localStorage.getItem('token'));
     }, []);
@@ -35,7 +33,7 @@ const Header = () => {
                     <div className="flex items-center">
                         <Link 
                             href={homePath()} 
-                            className="text-xl font-bold tracking-tight hover:text-gray-700 transition-colors"
+                            className="text-xl font-bold tracking-tight dark:text-black hover:text-gray-700 transition-colors"
                         >
                             developers.
                         </Link>
@@ -96,7 +94,7 @@ const Header = () => {
                                 <Button asChild variant={"outline"}>
                                 <Link 
                                     href="/signin" 
-                                    className={`text-gray-700 hover:text-gray-900 ${pathname === '/signin' ? 'font-semibold' : ''}`}
+                                    className={`text-gray-700 hover:text-gray-900 dark:text-white ${pathname === '/signin' ? 'font-semibold' : ''}`}
                                 >
                                     Login
                                 </Link>
@@ -104,7 +102,7 @@ const Header = () => {
                                 <Button asChild>
                                 <Link 
                                     href="/signup" 
-                                    className={`bg-black text-white px-4  py-2 rounded-lg hover:bg-gray-800 ${pathname === '/signup' ? 'font-semibold' : ''}`}
+                                    className={`bg-black text-white px-4  py-2 rounded-lg dark:text-black hover:bg-gray-800 ${pathname === '/signup' ? 'font-semibold' : ''}`}
                                 >
                                     Register
                                 </Link>

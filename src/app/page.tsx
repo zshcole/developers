@@ -99,8 +99,8 @@ export default function Home() {
             {/* Content container */}
             <div className="p-3 sm:p-4">
               <CardHeader className="p-0 space-y-1 mb-2">
-                <h3 className="text-sm md:text-base font-semibold text-gray-900">{dev.name}</h3>
-                <p className="text-xs md:text-sm text-gray-600">Full Stack Engineer</p>
+                <h3 className="text-sm md:text-base font-semibold text-gray-900 dark:text-white">{dev.name}</h3>
+                <p className="text-xs md:text-sm text-gray-600 dark:text-white">Full Stack Engineer</p>
               </CardHeader>
 
               <CardContent className="p-0">
