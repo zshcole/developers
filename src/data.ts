@@ -1,4 +1,6 @@
-export const intialDevelopers = [
+import { Developer } from "./features/developers/types";
+
+export const intialDevelopers: Developer[] = [
     {
         id: '1',
         name: 'John Doe',
@@ -11,7 +13,7 @@ export const intialDevelopers = [
         forks: 100,
         issues: 100,
         pullRequests: 100,
-        projects: 100,
+        projects: [],
         packages: 100,
         organizations: 100,
         location: 'San Francisco, CA',
@@ -20,7 +22,13 @@ export const intialDevelopers = [
         website: 'https://website.com',
         email: '', 
         phone: '',
-        skill: ['Python', 'Django', 'AWS'],
+        role: 'Developer',
+        bio: 'Experienced developer with a passion for coding.',
+        socials: [
+            { id: '1', name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { id: '2', name: 'GitHub', url: 'https://github.com/johndoe' }
+        ],
+        skills: ['Python', 'Django', 'AWS'],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
     },
@@ -36,7 +44,7 @@ export const intialDevelopers = [
         forks: 100,
         issues: 100,
         pullRequests: 100,
-        projects: 100,
+        projects: [],
         packages: 100,
         organizations: 100,
         location: 'San Francisco, CA',
@@ -45,6 +53,12 @@ export const intialDevelopers = [
         website: 'https://website.com',
         email: '', 
         phone: '',
+        role: 'Developer',
+        bio: 'Experienced developer with a passion for coding.',
+        socials: [
+            { id: '1', name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { id: '2', name: 'GitHub', url: 'https://github.com/johndoe' }
+        ],
         skills: ['Python', 'Django', 'AWS'],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -61,7 +75,7 @@ export const intialDevelopers = [
         forks: 100,
         issues: 100,
         pullRequests: 100,
-        projects: 100,
+        projects: [],
         packages: 100,
         organizations: 100,
         location: 'San Francisco, CA',
@@ -70,6 +84,12 @@ export const intialDevelopers = [
         website: 'https://website.com',
         email: '', 
         phone: '',
+        role: 'Developer',
+        bio: 'Experienced developer with a passion for coding.',
+        socials: [
+            { id: '1', name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { id: '2', name: 'GitHub', url: 'https://github.com/johndoe' }
+        ],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
     },
@@ -85,7 +105,7 @@ export const intialDevelopers = [
         forks: 100,
         issues: 100,
         pullRequests: 100,
-        projects: 100,
+        projects: [],
         packages: 100,
         organizations: 100,
         location: 'San Francisco, CA',
@@ -94,6 +114,12 @@ export const intialDevelopers = [
         website: 'https://website.com',
         email: '',
         phone: '',
+        role: 'Developer',
+        bio: 'Experienced developer with a passion for coding.',
+        socials: [
+            { id: '1', name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { id: '2', name: 'GitHub', url: 'https://github.com/johndoe' }
+        ],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
     },
@@ -109,7 +135,7 @@ export const intialDevelopers = [
         forks: 100,
         issues: 100,
         pullRequests: 100,
-        projects: 100,
+        projects: [],
         packages: 100,
         organizations: 100,
         location: 'San Francisco, CA',
@@ -118,6 +144,12 @@ export const intialDevelopers = [
         website: 'https://website.com',
         email: '',
         phone: '',
+        role: 'Developer',
+        bio: 'Experienced developer with a passion for coding.',
+        socials: [
+            { id: '1', name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { id: '2', name: 'GitHub', url: 'https://github.com/johndoe' }
+        ],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
     },
@@ -133,7 +165,7 @@ export const intialDevelopers = [
         forks: 100,
         issues: 100,
         pullRequests: 100,
-        projects: 100,
+        projects: [],
         packages: 100,
         organizations: 100,
         location: 'San Francisco, CA',
@@ -142,7 +174,13 @@ export const intialDevelopers = [
         website: 'https://website.com',
         email: '',
         phone: '',
+        role: 'Developer',
+        bio: 'Experienced developer with a passion for coding.',
+        socials: [
+            { id: '1', name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { id: '2', name: 'GitHub', url: 'https://github.com/johndoe' }
+        ],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
     }
-]
+];
