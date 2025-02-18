@@ -45,7 +45,7 @@ export default function DevelopersPage() {
             // Example filter: assume developers have a 'specialization' field
             // Adjust this based on your actual data model
             filtered = filtered.filter(dev => 
-                dev.specialization === activeFilter
+                dev.role === activeFilter
             );
         }
 
@@ -114,7 +114,7 @@ export default function DevelopersPage() {
                                     <CardContent className="pt-4">
                                         <h2 className="text-lg font-semibold">{developer.name}</h2>
                                         <p className="text-sm text-gray-500 mt-1">
-                                            {developer.specialization || 'Software Developer'}
+                                            {developer.role || 'Software Developer'}
                                         </p>
                                         <div className="mt-3 text-sm line-clamp-2 text-gray-600">
                                             {developer.description || 'Experienced developer with a passion for creating innovative solutions.'}

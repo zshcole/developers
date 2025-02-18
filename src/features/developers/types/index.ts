@@ -14,7 +14,7 @@ export interface Developer {
   followers: number;
   following: number;
   repos: number;
-  stars: number;
+  rating: number;
   forks: number;
   issues: number;
   pullRequests: number;
